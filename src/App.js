@@ -1,6 +1,6 @@
 import React from 'react';
 import USDollar from './USDollar';
-
+import AusDollar from './AusDollar';
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
           Currency Converter
         
       <USDollar/>
+      <AusDollar/>
     </div>
   );
 }
