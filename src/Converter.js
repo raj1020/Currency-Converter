@@ -1,6 +1,5 @@
 import React from 'react';
-import USDollar from './USDollar';
-import AusDollar from './AusDollar';
+import Dollar from './Dollar';
 
 
 class Converter extends React.Component {
@@ -10,12 +9,20 @@ class Converter extends React.Component {
         this.state = {amount: 0};
     }
 
+    globalChange(item) {
+        this.setState ( {
+            amount: item
+
+        });
+
+    }
+
     render () {
         return (
             <>
                <p>This app helps you convert Australian Dollar to US Dollar and vice-versa.</p> 
-               <USDollar amount= {this.state.amount}/>
-      <AusDollar amount= {this.state.amount}/>
+               <Dollar amount= {this.state.amount} globalChange = {this.globalChange.bind(this)}/>
+      <Dollar amount= {this.state.amount} globalChange = {this.globalChange.bind(this)}/>
             </>
         );
     }
