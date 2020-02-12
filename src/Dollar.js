@@ -15,6 +15,10 @@ class Dollar extends React.Component {
          if (this.props.amount >= 1000000 && this.props.money ==='AusDollar') {
              return (<p>You can buy a house in Sydney</p>);
          }
+
+         if (this.props.amount >= 700000 && this.props.money ==='USDollar') {
+            return (<p>You can buy a house in Sydney</p>);
+        }
          return(<p>You can not buy a house in Sydney</p>);
      } 
 
