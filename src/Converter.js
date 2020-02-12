@@ -46,7 +46,7 @@ class Converter extends React.Component {
 
     }
 
-    
+
     
 
     render () {
@@ -58,7 +58,7 @@ class Converter extends React.Component {
         return (
             <>
                <p>This app helps you convert Australian 
-                   Dollar to US Dollar and vice-versa.</p> 
+                   Dollar to US Dollar and vice-versa. And then it will help you decide whether you can buy an average house in Sydney or not.</p> 
                <Dollar amount= {usDollar} 
                onChange = {this.usChange}
                money = 'USDollar'

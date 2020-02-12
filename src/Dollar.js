@@ -13,13 +13,13 @@ class Dollar extends React.Component {
 
      decision () {
          if (this.props.amount >= 1000000 && this.props.money ==='AusDollar') {
-             return (<p>You can buy a house in Sydney</p>);
+             return (<p>You can buy a house in Sydney with this money.</p>);
          }
 
          if (this.props.amount >= 700000 && this.props.money ==='USDollar') {
-            return (<p>You can buy a house in Sydney</p>);
+            return (<p>You can buy a house in Sydney with this money.</p>);
         }
-         return(<p>You can not buy a house in Sydney</p>);
+         return(<p>You can not buy a house in Sydney with this money.</p>);
      } 
 
     
