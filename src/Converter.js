@@ -4,16 +4,23 @@ import Dollar from './Dollar';
 
 
 
-const currency = {
-    USD: 'USDollar',
-    AuD: 'AusDollar'
-};
+
+
+function toUSDollar (dollarAmount) {
+    return (dollarAmount* (1/0.7));
+    
+}
+
+function toAusDollar (dollarAmount) {
+    return (dollarAmount* 0.7);
+    
+}
 
 class Converter extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {amount: 0,
+        this.state = {amount: '',
         currency: ''};
         this.usChange = this.usChange.bind(this);
         this.ausChange = this.ausChange.bind(this);
@@ -39,20 +46,26 @@ class Converter extends React.Component {
 
     }
 
+    
+    
+
     render () {
         const currency = this.state.currency;
+        const amount = this.state.amount;
+        const ausDollar = currency ==='USDollar'? toUSDollar(amount) : amount;
+        const usDollar = currency ==='AusDollar'? toAusDollar(amount) : amount;
 
         return (
             <>
                <p>This app helps you convert Australian 
                    Dollar to US Dollar and vice-versa.</p> 
-               <Dollar amount= {this.state.amount} 
+               <Dollar amount= {usDollar} 
                onChange = {this.usChange}
-               currency = 'AusDollar'
+               money = 'USDollar'
                />
-                <Dollar amount= {this.state.amount} 
+                <Dollar amount= {ausDollar} 
                 onChange = {this.ausChange}
-                currency = 'USDollar'
+                money = "AusDollar"
                 />
             </>
         );
