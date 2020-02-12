@@ -2,6 +2,8 @@ import React from 'react';
 
 
 
+
+
 class Dollar extends React.Component {
     constructor(props) {
         super(props);
@@ -14,8 +16,10 @@ class Dollar extends React.Component {
     render () {
         return (
             <div>
-                <p>Please input the  Dollar amount</p>
-                < input value = {this.props.amount} onChange = {(e) => {this.props.globalChange(e.target.value)}} />
+                <p>Please input the  {this.props.currency} amount</p>
+                < input value = {this.props.amount} 
+                onChange = {(e) => 
+                {this.props.globalChange(e.target.value)}} />
             </div>
         );
     }
